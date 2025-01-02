@@ -11,6 +11,7 @@ const RegestrationForm = () => {
   const [courseData, setCourseData] = useState([]);
   const [course, setCourse] = useState([]);
   const [selectedCourseType, setSelectedCourseType] = useState("");
+  const [notifacation, setNotification] = useState(false);
   const dispatch = useDispatch();
   const filter =
     selectedCourseType !== ""
@@ -72,6 +73,10 @@ const RegestrationForm = () => {
       })
     );
     handleCancle();
+    setNotification(true);
+    setTimeout(() => {
+      setNotification(false);
+    }, 3000);
   };
   const handleCancle = () => {
     setError("");
@@ -82,6 +87,13 @@ const RegestrationForm = () => {
 
   return (
     <div className="w-96 p-5 rounded-lg mt-20 border mx-auto flex flex-col gap-5">
+      {notifacation && (
+        <div className="toast toast-top mt-14 toast-end">
+          <div className="alert alert-success">
+            <span>Student Registered successfully.</span>
+          </div>
+        </div>
+      )}
       <span className="text-center text-lg font-semibold">
         Student Regestration Form
       </span>
