@@ -86,7 +86,7 @@ const RegestrationForm = () => {
   };
 
   return (
-    <div className="w-96 p-5 rounded-lg mt-20 border mx-auto flex flex-col gap-5">
+    <div className="w-96 p-5 rounded-lg mt-10 border mx-auto flex flex-col gap-5">
       {notifacation && (
         <div className="toast toast-top mt-14 toast-end">
           <div className="alert alert-success">
