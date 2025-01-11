@@ -45,7 +45,7 @@ const RegestrationForm = () => {
       return "Email ID is not valid.";
     }
 
-    return null; // All validations passed
+    return null;
   };
 
   useEffect(() => {
